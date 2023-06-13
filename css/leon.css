@@ -1,5 +1,5 @@
 :root {
-    --main-color: #10cab7;
+    --main-color: hsl(174, 85%, 43%);
 }
 * {
     -webkit-box-sizing: border-box;
@@ -34,6 +34,28 @@ body {
         width: 1170px;
     }
 }
+.special-heading {
+    color: hsl(0, 0%, 92%);
+    font-size: 6.25rem;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -0.1875rem;
+    margin: 0;
+}
+.special-heading + p {
+    margin: -1.875rem 0 0;
+    font-size: 1.25rem;
+    text-align: center;
+    color: hsl(300, 1%, 47%);
+}
+@media (max-width : 767px) {
+    .special-heading {
+        font-size: 3.75rem;
+    }
+    .special-heading + p {
+        margin-top: -1.25rem;
+    }
+}
 .header {
     padding: 1.25rem;
 }
@@ -58,7 +80,7 @@ body {
     justify-content: flex-end;
 }
 .header .links .icon span {
-    background-color:#333 ;
+    background-color:hsl(0, 0%, 20%) ;
     margin-bottom: 0.3125rem;
     height: 0.125rem;
 }
@@ -76,7 +98,7 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    background-color: #f6f6f6;
+    background-color: hsl(0, 0%, 96%);
     position: absolute;
     right: 0;
     min-width: 12.5rem;
@@ -88,7 +110,7 @@ body {
     content: "";
     border-width: 10px;
     border-style: solid;
-    border-color: transparent transparent #f6f6f6 transparent;
+    border-color: transparent transparent hsl(0, 0%, 96%) transparent;
     position: absolute;
     right: 5px;
     top: -20px;
@@ -100,14 +122,14 @@ body {
     display: block;
     padding: 0.9375rem;
     text-decoration: none;
-    color: #333;
+    color: hsl(0, 0%, 20%);
     transition: 0.3s;
 }
 .header .links ul li a:hover {
     padding-left: 1.5625rem;
 }
 .header .links ul li:not(:last-child) a {
-    border-bottom: 0.0625rem solid #ddd;
+    border-bottom: 0.0625rem solid hsl(0, 0%, 87%);
 }
 .landing {
     background-image: url(../images/landing.jpg);
@@ -134,3 +156,34 @@ body {
     font-size: 1.1875rem;
     line-height: 1.8;
 }
+.features {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+    background-color: hsl(0, 0%, 96%);
+}
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
+    grid-gap:1.25rem;
+}
+.features .feat {
+    padding: 1.25rem;
+    text-align: center;
+}
+.features .feat i {
+    color: var(--main-color);
+}
+.features .feat h3 {
+    font-weight: 800;
+    margin: 1.875rem;
+}
+.features .feat p {
+    line-height: 1.8;
+    color: hsl(0, 0%, 47%);
+    font-size: 1.0625rem;
+}
+.services {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+}
+
