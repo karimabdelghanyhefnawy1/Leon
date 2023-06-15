@@ -1,5 +1,6 @@
 :root {
     --main-color: hsl(174, 85%, 43%);
+    --secondary-color :hsl(200, 32%, 25%);
 }
 * {
     -webkit-box-sizing: border-box;
@@ -186,4 +187,61 @@ body {
     padding-top: 3.75rem;
     padding-bottom: 3.75rem;
 }
+.services .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
+    grid-gap:1.875rem;
+    margin-top: 6.25rem;
+}
+.services .services-content .srv {
+    display: flex;
+    margin-bottom: 2.5rem;
+}
+@media (max-width: 767px) {
+    .services .services-content .srv {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.services .services-content .srv i {
+    color: var(--main-color);
+    flex-basis: 3.75rem;
+}
+.services .services-content .srv .text {
+    flex: 1;
+}
+.services .services-content .srv .text h3 {
+    margin: 0 0 1.25rem;
+}
+.services .services-content .srv .text p {
+    color: hsl(0, 0%, 27%);
+    font-weight: 300;
+    line-height: 1.6;
+}
+.services .services-content .image {
+    text-align: center;
+    position: relative;
+}
+.services .services-content .image::before { 
+    content: "";
+    background-color: var(--secondary-color);
+    width: 6.25rem;
+    height: calc(100% + 6.25rem);
+    top: -3.125rem;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+.services .services-content .image img {
+    width: 16.25rem;
+}
+@media (max-width: 1199px) {
+    .image-column {
+        display: none;
+    }
+}
+
+
+
+
 
