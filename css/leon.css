@@ -3,6 +3,7 @@
     --secondary-color :hsl(200, 32%, 25%);
     --section-padding:3.75rem;
     --section-background:hsl(0, 0%, 96%);
+    --main-duration : 0.3s;
 }
 * {
     -webkit-box-sizing: border-box;
@@ -12,6 +13,9 @@
 body {
     font-family: 'League Spartan', sans-serif;
     font-family: 'Work Sans', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
 }
 .container {
     padding-left: 0.9375rem;
@@ -92,7 +96,7 @@ body {
 }
 .header .links .icon span:nth-child(2) {
     width: 60%;
-    transition: 0.3s;
+    transition: var(--main-duration);
 }
 .header .links .icon span:last-child {
     width: 100%;
@@ -126,7 +130,7 @@ body {
     padding: 0.9375rem;
     text-decoration: none;
     color: hsl(0, 0%, 20%);
-    transition: 0.3s;
+    transition: var(--main-duration);
 }
 .header .links ul li a:hover {
     padding-left: 1.5625rem;
@@ -342,7 +346,61 @@ body {
 .about .about-content .text p:last-of-type {
     line-height: 2;
     color: hsl(0, 0%, 47%);
-}  
+}
+.contact {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+}
+.contact .info {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    text-align: center;
+}
+.contact .info .lable {
+    font-size: 2.1875rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    letter-spacing: -0.125rem;
+    margin-bottom: 1rem;
+}
+.contact .info .link {
+    display: block;
+    font-size: 2.1875rem;
+    color: var(--main-color);
+    text-decoration: none;
+}
+.contact .info .social {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.25rem;
+    font-size: 1rem;
+}
+.contact .info .social i {
+    margin-left: 0.625rem;
+    color: var(--secondary-color);
+}
+@media (max-width: 767px) {
+    .contact .info .link,
+    .contact .info .lable {
+        font-size: 1.5625rem;
+    }
+}
+.footer {
+    background-color: var(--secondary-color);
+    color: hsl(0, 0%, 100%);
+    padding: 1.875rem 0.625rem;
+    text-align: center;
+    font-size: 1.125rem;
+}
+.footer span {
+    font-weight: 800;
+    color: var(--main-color);
+}
+
+
+
+
 
 
 
